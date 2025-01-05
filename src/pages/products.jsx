@@ -20,7 +20,7 @@ const Modal = ({ product, onClose }) => {
     // Hide the message after 2 seconds
     setTimeout(() => {
       setShowMessage(false);
-    }, 4000);
+    }, 2000);
   };
 
   if (!product) return null;

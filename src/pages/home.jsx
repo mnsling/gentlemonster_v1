@@ -24,7 +24,7 @@ const Home = () => {
     };
 
     return (
-        <div className="h-screen w-full font-grotesk">
+        <div className="h-screen w-full font-grotesk bg-white">
             <video className={`transition-all duration-500 ${isResized ? 'w-full h-[80%] md:w-[50%] md:h-full' : 'w-full h-[80%] md:h-full'} object-cover`} src={tekken} autoPlay loop muted playsInline />
             <div className={`absolute top-0 left-0 transition-all duration-500 ${isResized ? 'w-full h-[80%] md:w-[50%] md:h-full' : 'w-full h-[80%] md:h-full'} bg-black bg-opacity-50 z-0`} />
             <div className="absolute top-0 left-0 z-10 flex items-center justify-center h-full w-full text-white">
