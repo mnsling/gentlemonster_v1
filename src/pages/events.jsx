@@ -44,7 +44,7 @@ const Events = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full relative font-grotesk overflow-auto hide-scrollbar">
+    <div className="h-screen w-full bg-white relative font-grotesk overflow-auto hide-scrollbar">
       <video
         className="w-full h-[70%] md:h-[90%] object-cover transition-all duration-500"
         src={activeEvent.vid}
