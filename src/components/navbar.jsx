@@ -128,23 +128,18 @@ const Navbar = () => {
                     <ul className="w-full border-t">
                         <Link to="/" onClick={toggleMenu} className='w-full border-b px-10 py-2 text-[5vw] text-left flex justify-between hover:bg-black hover:text-white button'>
                             Home
-                            <h1 className='text-[5vw]'>🡢</h1>
                         </Link>
                         <Link to="/events" onClick={toggleMenu} className='w-full border-b px-10 py-2 text-[5vw] text-left flex justify-between hover:bg-black hover:text-white button'>
                             Events
-                            <h1 className='text-[5vw]'>🡢</h1>
                         </Link>
                         <Link to="/products" onClick={toggleMenu} className='w-full border-b px-10 py-2 text-[5vw] text-left flex justify-between hover:bg-black hover:text-white button'>
                             Products
-                            <h1 className='text-[5vw]'>🡢</h1>
                         </Link>
                         <Link to="/collaborations" onClick={toggleMenu} className='w-full border-b px-10 py-2 text-[5vw] text-left flex justify-between hover:bg-black hover:text-white button'>
                             Collaborations
-                            <h1 className='text-[5vw]'>🡢</h1>
                         </Link>
                         <Link to="/stores" onClick={toggleMenu} className='w-full border-b px-10 py-2 text-[5vw] text-left flex justify-between hover:bg-black hover:text-white button'>
                             Stores
-                            <h1 className='text-[5vw]'>🡢</h1>
                         </Link>
                     </ul>
                     <button className='w-full border-y px-10 py-2 text-[5vw] text-left flex justify-between hover:bg-black hover:text-white button' onClick={setShowLoginPrompt}>Login</button>
@@ -164,7 +159,7 @@ const Navbar = () => {
                 <div className='flex fixed top-0 w-full h-full items-center justify-center bg-black bg-opacity-50 z-50'>
                     <div className='flex flex-col bg-white w-[70vw] lg:w-[50vw] h-[40vh] lg:flex-row rounded-md shadow-lg'>
                         <div className='h-[27vw] lg:h-full w-full lg:w-[15vw]'>
-                            <div className='h-full w-full px-5 lg:pl-8 pt-10 pb-5 lg:py-10 flex flex-col gap-8 lg:gap-10 border-b lg:border-r border-gray-300'>
+                            <div className='h-full w-full px-5 lg:pl-8 pt-10 pb-5 lg:py-10 flex flex-col gap-8 lg:gap-10 lg:border-r border-gray-300'>
                                 <div className='w-full flex justify-between'>
                                     <h1 className='text-[2.5vw] lg:text-[0.8vw]'>CONNECT A WALLET</h1>
                                     <button onClick={handleCloseAddPrompt}><img src={close} className='flex w-[2.4vw] h-[2.4vw] lg:hidden hover:rotate-90 button' /></button>
@@ -275,55 +270,55 @@ const Navbar = () => {
             )}
             {showCheckoutModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center z-50">
-                    <div className="bg-white w-full h-full px-20 py-8 flex flex-col gap-20">
+                    <div className="bg-white w-full h-full px-10 md:px-20 py-5 flex flex-col gap-10 md:gap-20">
                         <button onClick={() => setShowCheckoutModal(false)} className="text-left w-fit font-poppins text-[2.5vw] md:text-[0.7vw]">🡠 BACK</button>
                         <div className='w-full h-full'>
-                            <h1 className="text-xl md:text-[3vw] font-extralight font-poppins mb-10 w-full">YOUR CART.</h1>
-                            <div className="hidden lg:block h-[60%] w-full">
-                                <div className='flex h-full w-full justify-between'>
-                                    <div className='w-[60%] h-full overflow-auto hide-scrollbar'>
+                            <h1 className="text-xl md:text-[3vw] font-extralight font-poppins mb-5 md:mb-16 w-full">YOUR CART.</h1>
+                            <div className="h-full md:h-[60%] w-full">
+                                <div className='flex flex-col gap-10 md:flex-row h-full w-full md:justify-between'>
+                                    <div className='w-full md:w-[60%] h-[40%] md:h-full overflow-auto hide-scrollbar'>
                                         {(
                                             cart.map((product, index) => (
-                                                <div key={index} className="h-[40%] w-full py-5">
+                                                <div key={index} className="h-[50%] md:h-[40%] w-full py-1 md:py-5">
                                                     <div className='w-full h-full flex'>
-                                                        <div className="w-[18%] h-full bg-black bg-cover bg-center" style={{ backgroundImage: `url(${product.image})` }} />
+                                                        <div className="w-[30vw] md:w-[18%] h-full bg-black bg-cover bg-center" style={{ backgroundImage: `url(${product.image})` }} />
                                                         <div className='w-full flex flex-col justify-center px-5 text-[1vw] tracking-tight'>
                                                             <div className='flex justify-between items-end'>
-                                                                <h1 className='font-light text-[1.5vw]'>{product.name}</h1>
-                                                                <h1 className='font-light'>{formatPrice(product.price)}</h1>
+                                                                <h1 className='font-light text-[3vw] md:text-[1.5vw]'>{product.name}</h1>
+                                                                <h1 className='font-light text-[2.2vw] md:text-[0.8vw]'>{formatPrice(product.price)}</h1>
                                                             </div>
                                                             <div className='flex justify-between pb-2 border-b font-light'>
-                                                                <h1 className='text-[2.3vw] md:text-[0.8vw] flex items-end'>Quantity:</h1>
-                                                                <h1 className='text-[2.3vw] md:text-[0.8vw] flex items-end'>x{product.quantity}</h1>
+                                                                <h1 className='text-[2.2vw] md:text-[0.8vw] flex items-end'>Quantity:</h1>
+                                                                <h1 className='text-[2.2vw] md:text-[0.8vw] flex items-end'>x{product.quantity}</h1>
                                                             </div>
-                                                            <h1 className='flex pt-2 text-[1vw] font-bold justify-end'>{formatPrice(product.quantity * product.price)}</h1>
+                                                            <h1 className='flex pt-2 text-[3vw] md:text-[1vw] font-semibold justify-end'>{formatPrice(product.quantity * product.price)}</h1>
                                                         </div>
                                                     </div>
                                                 </div>
                                             ))
                                         )}
                                     </div>
-                                    <div className='w-[30%] border-l border-black py-5 px-5'>
-                                        <h1 className="text-xl md:text-[2vw] font-extralight font-poppins mb-10 w-full pb-5 border-b">CART TOTALS.</h1>
-                                        <div className='w-full flex flex-col gap-3 text-gray-500 pb-5 border-b border-black'>
-                                            <div className='w-full flex justify-between'>
+                                    <div className='w-full md:w-[30%] md:border-l border-black md:py-5 md:px-5'>
+                                        <h1 className="text-xl md:text-[2vw] font-extralight font-poppins mb-5 w-full md:mb-10 md:pb-5 border-b">CART TOTALS.</h1>
+                                        <div className='w-full flex flex-col gap-3 text-gray-500 pb-5 border-b border-black font-poppins'>
+                                            <div className='w-full flex justify-between text-[2.5vw] md:text-[0.8vw]'>
                                                 <h1>Item Total</h1>
                                                 <p>{formatPrice(totalPrice)}</p>
                                             </div>
-                                            <div className='w-full flex justify-between'>
+                                            <div className='w-full flex justify-between text-[2.5vw] md:text-[0.8vw]'>
                                                 <h1>Shipping Fee</h1>
                                                 <p>FREE</p>
                                             </div>
-                                            <div className='w-full flex justify-between'>
+                                            <div className='w-full flex justify-between text-[2.5vw] md:text-[0.8vw]'>
                                                 <h1>Tax</h1>
                                                 <p>₱‌0.00</p>
                                             </div>
                                         </div>
-                                        <div className='w-full flex justify-between pt-5 text-[1vw] font-bold'>
+                                        <div className='w-full flex justify-between pt-5 text-[2.8vw] md:text-[1vw] font-bold'>
                                             <h1>Total</h1>
                                             <h1>{formatPrice(totalPrice)}</h1>
                                         </div>
-                                        <button onClick={handleConfirmAndPay} className="bg-black text-white py-3 mt-20 w-full border hover:bg-white hover:text-black hover:border-black button">Confirm and Pay</button>
+                                        <button onClick={handleConfirmAndPay} className="bg-black text-white py-3 mt-10 md:mt-20 w-full border hover:bg-white hover:text-black hover:border-black button">Confirm and Pay</button>
                                     </div>
                                 </div>
                             </div>

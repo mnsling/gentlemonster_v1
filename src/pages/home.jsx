@@ -25,15 +25,15 @@ const Home = () => {
 
     return (
         <div className="h-screen w-full font-grotesk bg-white">
-            <video className={`transition-all duration-500 ${isResized ? 'w-full h-[80%] md:w-[50%] md:h-full' : 'w-full h-[80%] md:h-full'} object-cover`} src={tekken} autoPlay loop muted playsInline />
-            <div className={`absolute top-0 left-0 transition-all duration-500 ${isResized ? 'w-full h-[80%] md:w-[50%] md:h-full' : 'w-full h-[80%] md:h-full'} bg-black bg-opacity-50 z-0`} />
+            <video className={`transition-all duration-500 ${isResized ? 'w-full h-[80%] md:w-[50%] md:h-full' : 'w-full h-full md:h-full'} object-cover`} src={tekken} autoPlay loop muted playsInline />
+            <div className={`absolute top-0 left-0 transition-all duration-500 ${isResized ? 'w-full h-[80%] md:w-[50%] md:h-full' : 'w-full h-full md:h-full'} bg-black bg-opacity-50 z-0`} />
             <div className="absolute top-0 left-0 z-10 flex items-center justify-center h-full w-full text-white">
                 {!isResized ? (
-                    <div className={`hidden h-fit w-full md:flex transition-opacity duration-500 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+                    <div className={`h-fit w-full flex items-center transition-opacity duration-500 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
                         <div className="w-[40%] ml-[18vw]">
                             <Time />
                         </div>
-                        <div className="w-full typewriter">
+                        <div className="hidden md:block w-full typewriter">
                             <h1 className="text-left text-xs">THINKING ABOUT THE FUTURE ...</h1>
                         </div>
                         <div className="w-full group">
