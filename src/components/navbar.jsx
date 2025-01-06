@@ -275,7 +275,7 @@ const Navbar = () => {
                         <div className='w-full h-full'>
                             <h1 className="text-xl md:text-[3vw] font-extralight font-poppins mb-5 md:mb-16 w-full">YOUR CART.</h1>
                             <div className="h-full md:h-[60%] w-full">
-                                <div className='flex flex-col gap-10 md:flex-row h-full w-full md:justify-between'>
+                                <div className='flex flex-col gap-14 md:flex-row h-full w-full md:justify-between'>
                                     <div className='w-full md:w-[60%] h-[40%] md:h-full overflow-auto hide-scrollbar'>
                                         {(
                                             cart.map((product, index) => (
@@ -284,7 +284,7 @@ const Navbar = () => {
                                                         <div className="w-[30vw] md:w-[18%] h-full bg-black bg-cover bg-center" style={{ backgroundImage: `url(${product.image})` }} />
                                                         <div className='w-full flex flex-col justify-center px-5 text-[1vw] tracking-tight'>
                                                             <div className='flex justify-between items-end'>
-                                                                <h1 className='font-light text-[3vw] md:text-[1.5vw]'>{product.name}</h1>
+                                                                <h1 className='font-light md:font-extralight text-[3vw] md:text-[1.5vw]'>{product.name}</h1>
                                                                 <h1 className='font-light text-[2.2vw] md:text-[0.8vw]'>{formatPrice(product.price)}</h1>
                                                             </div>
                                                             <div className='flex justify-between pb-2 border-b font-light'>
@@ -299,7 +299,7 @@ const Navbar = () => {
                                         )}
                                     </div>
                                     <div className='w-full md:w-[30%] md:border-l border-black md:py-5 md:px-5'>
-                                        <h1 className="text-xl md:text-[2vw] font-extralight font-poppins mb-5 w-full md:mb-10 md:pb-5 border-b">CART TOTALS.</h1>
+                                        <h1 className="text-xl md:text-[2vw] font-extralight font-poppins mb-5 w-full md:mb-10 md:pb-5 md:border-b">CART TOTALS.</h1>
                                         <div className='w-full flex flex-col gap-3 text-gray-500 pb-5 border-b border-black font-poppins'>
                                             <div className='w-full flex justify-between text-[2.5vw] md:text-[0.8vw]'>
                                                 <h1>Item Total</h1>
