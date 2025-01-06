@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import tekken from '../assets/tekken.mp4';
 import tekken2 from '../assets/tekken2.mp4';
 import tekken3 from '../assets/tekken3.mp4';
@@ -52,7 +53,7 @@ const Home = () => {
                             className={`sticky top-0 md:absolute flex flex-col gap-5 items-center justify-center w-full h-[80%] md:w-[50%] md:h-full text-center transition-all duration-700 ease-in-out md:z-50 ${isResized ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                             <img src={gt} className="w-[75vw] md:w-[35vw]" />
                             <p className="text-xs md:text-sm font-poppins mt-2 tracking-[0.01vw]">"Where high-fashion meets fierce gaming:<br /> Gentle Monster × Tekken 8."</p>
-                            <button className="text-[1.8vw] md:text-xs px-12 py-1 bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black button rounded-full md:relative">VIEW ALL EVENTS</button>
+                            <Link to="/events" className="text-[1.8vw] md:text-xs px-12 py-1 bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black button rounded-full md:relative">VIEW ALL EVENTS</Link>
                         </div>
                         <div className={`sticky top-0 bg-white md:bg-transparent h-full w-full flex justify-end duration-200 ease-in ${isRightSectionVisible ? 'opacity-100' : 'opacity-0'}`}>
                             <div className="w-full md:w-[50%] h-full flex pt-20 px-5">
