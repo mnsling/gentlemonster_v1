@@ -1,8 +1,19 @@
-# React + Vite
+<h3 align="center">gentlemonster - v1</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">A remake of Gentle Monster's official website with a unique and personalized design, built entirely using React.js for the frontend.</p>
 
-Currently, two official plugins are available:
+![image alt](https://github.com/mnsling/gentlemonster_clone/blob/0f6820e06949d00adf2d5609256b425ffb559e6e/src/assets/Untitled%20design.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Set-up
+
+Install Dependencies
+
+```bash
+  npm install
+```
+
+Start the Development Server
+
+```bash
+  npm run dev
+```
