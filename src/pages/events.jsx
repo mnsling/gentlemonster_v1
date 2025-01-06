@@ -6,7 +6,7 @@ function PostCard({ post }) {
     <div className="flex flex-col w-full md:w-[48%] xl:w-[32%] 2xl:w-[23.3%] gap-6 mb-[12vw] md:h-[60vw] md:mb-20 xl:mb-0 md:gap-3 xl:h-[40vw] xl:gap-6 2xl:h-[30vw]">
       {post.type === 'video' ? (
         <div className="w-full h-[80vw] md:h-[45vw] xl:h-[70%] 2xl:h-[20vw]">
-          <video className="w-full h-full object-cover" autoPlay muted loop>
+          <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
             <source src={post.media} type="video/mp4" />
           </video>
         </div>

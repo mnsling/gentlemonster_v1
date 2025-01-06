@@ -275,11 +275,11 @@ const Navbar = () => {
                         <div className='w-full h-full'>
                             <h1 className="text-xl md:text-[3vw] font-extralight font-poppins mb-5 md:mb-16 w-full">YOUR CART.</h1>
                             <div className="h-full md:h-[60%] w-full">
-                                <div className='flex flex-col gap-14 md:flex-row h-full w-full md:justify-between'>
+                                <div className='flex flex-col gap-10 md:flex-row h-full w-full md:justify-between'>
                                     <div className='w-full md:w-[60%] h-[40%] md:h-full overflow-auto hide-scrollbar'>
                                         {(
                                             cart.map((product, index) => (
-                                                <div key={index} className="h-[50%] md:h-[40%] w-full py-1 md:py-5">
+                                                <div key={index} className="h-[40%] md:h-[40%] w-full py-1 md:py-5">
                                                     <div className='w-full h-full flex'>
                                                         <div className="w-[30vw] md:w-[18%] h-full bg-black bg-cover bg-center" style={{ backgroundImage: `url(${product.image})` }} />
                                                         <div className='w-full flex flex-col justify-center px-5 text-[1vw] tracking-tight'>

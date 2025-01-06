@@ -62,7 +62,7 @@ const Home = () => {
                                         <h1 className="text-xs font-semibold font-poppins text-black">① NEW PROJECT</h1>
                                         <div className="h-full w-full">
                                             {isRightSectionVisible && (
-                                                <video className="w-full h-full object-cover" autoPlay loop muted>
+                                                <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
                                                     <source src={tekken2} type="video/mp4" />
                                                 </video>
                                             )}
@@ -96,7 +96,7 @@ const Home = () => {
                                         <h1 className="text-xs font-semibold font-poppins text-black">③ NEW ARRIVALS</h1>
                                         <div className="h-full w-full">
                                             {isRightSectionVisible && (
-                                                <video className="w-full h-full object-cover" autoPlay loop muted>
+                                                <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
                                                     <source src={tekken3} type="video/mp4" />
                                                 </video>
                                             )}
